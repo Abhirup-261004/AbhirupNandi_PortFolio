@@ -20,12 +20,12 @@ themeToggle.addEventListener('click', ()=>{
 // ===== Copy Email =====
 $('#copyEmail').addEventListener('click', async ()=>{
   try{
-    await navigator.clipboard.writeText('abhirupn2004@gmail.com.com');
+    await navigator.clipboard.writeText('abhirupn2004@gmail.com');
     const b = $('#copyEmail');
     const old = b.textContent; b.textContent = 'Copied! ✅';
     setTimeout(()=> b.textContent = old, 1200);
   }catch{
-    alert('Copy failed. Email: abhirup@example.com');
+    alert('Copy failed. Email: abhirupn2004@gmail.com');
   }
 });
 
@@ -151,7 +151,7 @@ $('#contactForm').addEventListener('submit', (e)=>{
     $('#formStatus').textContent = 'Please fill out all fields.'; return;
   }
   const body = encodeURIComponent(`${data.message}\n\n— ${data.name} (${data.email})`);
-  const mailto = `mailto:abhirup@example.com?subject=${encodeURIComponent('Portfolio Inquiry')}&body=${body}`;
+  const mailto = `mailto:abhirupn2004@gmail.com?subject=${encodeURIComponent('Portfolio Inquiry')}&body=${body}`;
   window.location.href = mailto;
   $('#formStatus').textContent = 'Opening your email client…';
   e.target.reset();
