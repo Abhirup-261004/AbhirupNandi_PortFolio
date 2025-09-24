@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Abhirup Nandi — Portfolio</title>
+  <meta name="description" content="A sleek, developer portfolio with dark/light theme, project filters, and smooth animations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand"><span class="logo" aria-hidden></span> <span>Abhirup Nandi</span></div>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="right">
+        <button class="btn ghost" id="copyEmail" title="Copy email">📧</button>
+        <button class="btn" id="themeToggle" title="Toggle theme">🌙</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" id="home">
+      <div>
+        <span class="badge monospace">Hi, I'm Abhirup — Full-stack Developer • Hackathon Enthusiast</span>
+        <h1>
+          Building delightful web apps that feel
+          <span class="grad-a">fast</span> and ship <span class="grad-b">reliably</span>.
+        </h1>
+        <p>Focused on MERN, performance, and useful DX. Exploring AI tooling and real-world problem solving through hackathons.</p>
+        <div class="hero-cta">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn" href="resume.pdf" download>Download Resume (PDF)</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden>
+        <div class="grid-bg"></div>
+        <div class="orbs"></div>
+        <div class="codecard monospace">
+<pre><code>// Minimal Express API
+import express from 'express'
+const app = express()
+app.get('/health', (_,res) => res.json({ ok:true }))
+app.listen(3000, ()=> console.log('Ready on :3000'))</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">About</h2>
+      <p class="lead">I love crafting clean UIs, robust APIs, and shipping features end-to-end. When I'm not coding, I'm mentoring peers, exploring system design, or preparing for competitive hackathons.</p>
+      <div class="about">
+        <div class="card">
+          <h3>Snapshot</h3>
+          <div class="kv">
+            <div><strong>Location:</strong><br><span class="muted">Kolkata, IN</span></div>
+            <div><strong>Focus:</strong><br><span class="muted">MERN • DSA • AI</span></div>
+            <div><strong>Open to:</strong><br><span class="muted">Internships • Open Source Contributions • Hackathon Collaborations</span></div>
+            <div><strong>Email:</strong><br><a href="mailto:abhirup@example.com">abhirupn2004@gmail.com</a></div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>What I bring</h3>
+          <ul>
+            <li>Pixel-perfect front-ends with thoughtful interactions</li>
+            <li>Type-safe Node.js APIs with tests & CI</li>
+            <li>Performance profiling and bundle diet culture</li>
+            <li>Team player with strong documentation habits</li>
+          </ul>
+          <div class="chips">
+            <span class="chip">🎯 Clean Architecture</span>
+            <span class="chip">⚡ Lighthouse 95+ goals</span>
+            <span class="chip">🔐 JWT & OAuth</span>
+            <span class="chip">🧪 Vitest/Playwright</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2 class="section-title">Skills</h2>
+      <p class="lead">A snapshot of what I use most often.</p>
+      <div class="skills" id="skillsGrid"></div>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+      <p class="lead">Filter by tag to explore focused work.</p>
+      <div class="toolbar" id="filters"></div>
+      <div class="projects" id="projectGrid"></div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
+      <p class="lead">Got an opportunity or idea to collaborate? Let's chat.</p>
+      <div class="about">
+        <div class="card">
+          <form id="contactForm">
+            <div>
+              <label for="name">Your Name</label>
+              <input id="name" name="name" placeholder="Enter your name" required />
+            </div>
+            <div>
+              <label for="email">Your Email</label>
+              <input id="email" name="email" type="email" placeholder="Enter your Email" required />
+            </div>
+            <div>
+              <label for="msg">Message</label>
+              <textarea id="msg" name="message" rows="5" placeholder="Tell me about your project…" required></textarea>
+            </div>
+            <div class="form-actions">
+              <button class="btn primary" type="submit">Send</button>
+              <span id="formStatus" class="muted"></span>
+            </div>
+          </form>
+        </div>
+        <div class="card">
+          <h3>Elsewhere</h3>
+          <p>I'm active on GitHub, LinkedIn, and X.</p>
+          <div class="socials">
+            <a class="btn" href="https://github.com/Abhirup-261004" onclick="alert('https://github.com/Abhirup-261004')">GitHub</a>
+            <a class="btn" href="https://www.linkedin.com/in/abhirup-nandi-b86a77286/" onclick="alert('https://www.linkedin.com/in/abhirup-nandi-b86a77286/')">LinkedIn</a>
+            <a class="btn" href="https://x.com/Abhirup_261004" onclick="alert('https://x.com/Abhirup_261004')">X</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="year"></span> • Built with ♥ by Abhirup • Theme-ready</div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-card">
+      <div class="modal-head">
+        <strong id="modalTitle">Project</strong>
+        <button class="btn" id="modalClose">Close ✕</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
