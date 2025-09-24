@@ -30,7 +30,7 @@ $('#copyEmail').addEventListener('click', async ()=>{
 });
 
 // ===== Active nav via IntersectionObserver =====
-const sections = ['about','skills','projects','contact'];
+const sections = ['about','skills','cp','projects','contact'];
 const observer = new IntersectionObserver(entries => {
   entries.forEach(e=>{
     if(e.isIntersecting){
@@ -47,12 +47,14 @@ sections.forEach(id=>{
 
 // ===== Skills =====
 const skills = [
+  { name:'C++', level:92 },
   { name:'HTML/CSS', level:92 },
   { name:'JavaScript', level:90 },
   { name:'Node + Express', level:88 },
   { name:'MongoDB', level:82 },
   { name:'Git & CI', level:85 },
   { name:'Design/UX', level:80 },
+  { name:'C', level:85 },
 ];
 const skillsGrid = $('#skillsGrid');
 skills.forEach(s=>{
@@ -70,14 +72,8 @@ const projects = [
     title:'StudyBuddy — Peer Learning',
     tags:['fullstack','node','design'],
     summary:'Matches students by subjects and timing, enabling quick study sprints and spaced-repetition reminders.',
-    details:'Node/Express API, Redis queues for reminders, and responsive UI. Designed a playful yet accessible brand system.'
-  },
-  {
-    title:'CareEase — Elderly Care App',
-    tags:['design','frontend'],
-    summary:'Clean UX for appointment scheduling and reminders with high-contrast accessibility.',
-    details:'Focused on larger tap targets, voice prompts, and keyboard-first navigation.'
-  }
+    details:'StudyBuddy is a smart learning assistant platform designed to support students in their academic journey. It helps with planning study schedules, offering personalized content recommendations, tracking progress, and providing practice quizzes. The goal is to make learning more structured, adaptive, and engaging, helping students stay organized and improve performance.'
+  }  
 ];
 
 const filterSet = new Set(['all', ...projects.flatMap(p=>p.tags)]);
@@ -124,8 +120,8 @@ const renderProjects = ()=>{
         <div class="tags">${p.tags.map(tagBadge).join('')}</div>
         <div class="actions">
           <button class="btn" data-idx="${i}">Details</button>
-          <a class="btn ghost" href="#" onclick="alert('Hook this up to your live demo!')">Live</a>
-          <a class="btn ghost" href="#" onclick="alert('Hook this up to your repo!')">Code</a>
+          <a class="btn ghost" href="#" onclick="alert('Coming Soon')">Live</a>
+          <a class="btn ghost" href="https://github.com/Abhirup-261004/StudyBuddy" onclick="alert('StudyBuddy')">Code</a>
         </div>
       </div>`;
     projectGrid.appendChild(card);

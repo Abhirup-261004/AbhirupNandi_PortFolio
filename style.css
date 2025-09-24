@@ -102,6 +102,23 @@ p.lead{color:var(--muted);margin:0 0 22px}
 .meter{height:8px;background:#0f1320;border-radius:999px;overflow:hidden;border:1px solid var(--line)}
 .meter>span{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-2))}
 
+/* CP */
+#cp ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#cp li {
+  margin: 8px 0;
+  font-weight: 600;
+}
+#cp a {
+  color: var(--accent-2);
+}
+#cp a:hover {
+  text-decoration: underline;
+}
+
 /* Projects */
 .toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
 .filter{padding:8px 12px;border-radius:10px;border:1px solid var(--line);background:transparent;color:var(--text);cursor:pointer}
@@ -123,7 +140,12 @@ label{font-weight:700}
 .tip{margin-top:14px}
 
 /* Footer */
-footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted)}
+footer{
+    padding:30px 0;
+    border-top:1px solid var(--line);
+    color:var(--muted);
+    text-align: center;
+}
 
 /* Modal */
 .modal{position:fixed;inset:0;background:rgba(2,6,23,.65);display:none;align-items:center;justify-content:center;padding:20px;z-index:60}
@@ -134,19 +156,37 @@ footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted)}
 
 /* Print Resume */
 @media print{
-  header, .hero-visual, .toolbar, .actions, .modal, footer{display:none !important}
-  section{break-inside:avoid}
+  header, .hero-visual, .toolbar, .actions, .modal, footer{
+    display:none !important
+}
+  section{
+    break-inside:avoid
+}
 }
 
 /* Responsive */
 @media (max-width: 920px){
-  .hero{grid-template-columns:1fr;gap:24px}
-  .about{grid-template-columns:1fr}
-  .skills{grid-template-columns:1fr 1fr}
-  .projects{grid-template-columns:1fr 1fr}
+  .hero{
+    grid-template-columns:1fr;gap:24px
+}
+  .about{
+    grid-template-columns:1fr
+}
+  .skills{
+    grid-template-columns:1fr 1fr
+}
+  .projects{
+    grid-template-columns:1fr 1fr
+}
 }
 @media (max-width: 560px){
-  .nav ul{display:none}
-  .skills{grid-template-columns:1fr}
-  .projects{grid-template-columns:1fr}
+  .nav ul{
+    display:none
+}
+  .skills{
+    grid-template-columns:1fr
+}
+  .projects{
+    grid-template-columns:1fr
+}
 }

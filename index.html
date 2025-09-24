@@ -17,6 +17,7 @@
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="#cp">Competitive Programming</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -38,18 +39,21 @@
         <p>Focused on MERN, performance, and useful DX. Exploring AI tooling and real-world problem solving through hackathons.</p>
         <div class="hero-cta">
           <a class="btn primary" href="#projects">View Projects</a>
-          <a class="btn" href="./Resume.pdf" download>Download Resume (PDF)</a>
+          <a class="btn" href="./Resume.pdf" download="Abhirup-Nandi-Resume.pdf">Download Resume (PDF)</a>
         </div>
       </div>
       <div class="hero-visual" aria-hidden>
         <div class="grid-bg"></div>
         <div class="orbs"></div>
         <div class="codecard monospace">
-<pre><code>// Minimal Express API
-import express from 'express'
-const app = express()
-app.get('/health', (_,res) => res.json({ ok:true }))
-app.listen(3000, ()=> console.log('Ready on :3000'))</code></pre>
+<pre><code>// 🌱 Tiny Express server
+import express from 'express';
+const app = express();
+
+app.get('/', (req, res) => res.send('👋 Hello from my demo server!'));
+app.get('/health', (_, res) => res.json({ status: '✅ Healthy' }));
+
+app.listen(3000, () => console.log('🚀 Live on :3000'));</code></pre>
         </div>
       </div>
     </section>
@@ -72,14 +76,14 @@ app.listen(3000, ()=> console.log('Ready on :3000'))</code></pre>
           <ul>
             <li>Pixel-perfect front-ends with thoughtful interactions</li>
             <li>Type-safe Node.js APIs with tests & CI</li>
-            <li>Performance profiling and bundle diet culture</li>
             <li>Team player with strong documentation habits</li>
           </ul>
           <div class="chips">
-            <span class="chip">🎯 Clean Architecture</span>
-            <span class="chip">⚡ Lighthouse 95+ goals</span>
-            <span class="chip">🔐 JWT & OAuth</span>
-            <span class="chip">🧪 Vitest/Playwright</span>
+            <span class="chip">⚛️ MERN Stack Development</span>
+            <span class="chip">📚 Data Structures & Algorithms</span>
+            <span class="chip">🤖 AI & Machine Learning (exploring)</span>
+            <span class="chip">🏆 Hackathon Enthusiast</span>
+            <span class="chip">🌐 Open Source Contributions</span>
           </div>
         </div>
       </div>
@@ -89,6 +93,29 @@ app.listen(3000, ()=> console.log('Ready on :3000'))</code></pre>
       <h2 class="section-title">Skills</h2>
       <p class="lead">A snapshot of what I use most often.</p>
       <div class="skills" id="skillsGrid"></div>
+    </section>
+
+    <section id="cp">
+        <h2 class="section-title">Competitive Programming</h2>
+        <p class="lead">Platforms where I practice and improve problem-solving skills.</p>
+        <div class="about">
+            <div class="card">
+            <ul>
+                <li><a href="https://leetcode.com/u/Abhirup_Nandi/" target="_blank">💻 LeetCode</a></li>
+                <li><a href="https://www.codechef.com/users/worth_crane_19" target="_blank">🍴 CodeChef</a></li>
+                <li><a href="https://www.geeksforgeeks.org/user/abhirup33v2/" target="_blank">🏅 GeeksforGeeks</a></li>
+            </ul>
+            </div>
+            <div class="card">
+            <h3>Highlights</h3>
+            <p>I actively solve problems across platforms to sharpen algorithms, data structures, and contest skills.</p>
+            <div class="chips">
+                <span class="chip">⭐ Rated on CodeChef</span>
+                <span class="chip">🔥 100 Days LeetCode Badge</span>
+                <span class="chip">⚔️ Regular contests</span>
+            </div>
+            </div>
+        </div>
     </section>
 
     <section id="projects">
@@ -136,7 +163,7 @@ app.listen(3000, ()=> console.log('Ready on :3000'))</code></pre>
   </main>
 
   <footer>
-    <div class="container">© <span id="year"></span> • Built with ♥ by Abhirup • Theme-ready</div>
+    <div class="container">&copy; <span id="year"></span> • Built with &hearts; by Abhirup</div>
   </footer>
 
   <!-- Modal -->
